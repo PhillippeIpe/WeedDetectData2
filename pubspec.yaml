@@ -49,6 +49,9 @@ flutter:
     - assets/10weedwithpipelinetrial4.tflite
     - assets/label_maptry4.json
 
+    - assets/10weedwithpipelinetrial5.tflite
+    - assets/label_maptry5.json
+
     - assets/images/dev1.png
     - assets/images/dev2.png
     - assets/images/dev3.png

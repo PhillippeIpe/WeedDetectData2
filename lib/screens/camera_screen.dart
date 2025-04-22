@@ -107,7 +107,7 @@ class _CameraScreenState extends State<CameraScreen> {
   Future<void> loadModel() async {
     try {
       _interpreter = await tflite.Interpreter.fromAsset(
-        "assets/10weedwithpipelinetrial4.tflite",
+        "assets/10weedwithpipelinetrial5.tflite",
       );
       print("Model loaded successfully");
     } catch (e) {
@@ -118,7 +118,7 @@ class _CameraScreenState extends State<CameraScreen> {
   Future<void> loadLabels() async {
     try {
       String jsonString = await rootBundle.loadString(
-        'assets/label_maptry4.json',
+        'assets/label_maptry5.json',
       );
       Map<String, dynamic> jsonMap = jsonDecode(jsonString);
       setState(() {
