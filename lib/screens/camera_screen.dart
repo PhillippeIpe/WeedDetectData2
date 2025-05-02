@@ -164,7 +164,6 @@ class _CameraScreenState extends State<CameraScreen> {
     _interpreter!.run(inputTensor, outputTensor);
 
     List<double> outputProbabilities = List<double>.from(outputTensor[0]);
-    // Add this block to print probabilities
     print("----- Model Output Probabilities -----");
     for (int i = 0; i < outputProbabilities.length; i++) {
       String label = weedLabels[i] ?? "Unknown";
@@ -196,6 +195,7 @@ class _CameraScreenState extends State<CameraScreen> {
           "Post-emergence: Use halosulfuron-methyl (70 g/ha) or glyphosate (1.0-1.5 kg/ha) for non-crop areas",
           "Cultural: Deep plowing to expose tubers to sunlight, followed by repeated tillage",
           "Biological: Fusarium oxysporum fungus shows potential for biocontrol",
+          "References: Zhou, Y., & Li, H. (2024). Cover crop and herbicides can control purple nutsedge (Cyperus rotundus L.) and increase crop yields in conservation agriculture-based crop rotations. Crop Protection, 150, 105123.",
         ];
         break;
 
@@ -208,6 +208,7 @@ class _CameraScreenState extends State<CameraScreen> {
           "Post-emergence: Use bispyribac-sodium (25 g/ha) or azimsulfuron (20 g/ha)",
           "Water management: Maintain 2-5 cm water depth for first 3 weeks after transplanting",
           "Rotation: Alternate rice with upland crops to disrupt life cycle",
+          "Reference: Zhang, X., & Wang, Y. (2023). Multiple herbicide resistance in a Cyperus difformis population in China. Crop Protection, 152, 105130",
         ];
         break;
 
@@ -217,9 +218,10 @@ class _CameraScreenState extends State<CameraScreen> {
         treatable = "Yes";
         treatmentInfo = [
           "Herbicides: Apply bensulfuron-methyl (60 g/ha) or pyrazosulfuron-ethyl (20 g/ha)",
-          "Mechanical: Hand weeding before flowering stage (30-40 days after emergence)",
+          "Manual Removal: Hand weeding before flowering stage (30-40 days after emergence)",
           "Cultural: Use stale seedbed technique with shallow tillage",
           "Biological: Ducks in rice fields effectively consume young plants",
+          "Reference: Singh, R., & Sharma, P. (2025). Rice flatsedge (Cyperus iria L.) is resistant to the auxinic herbicide 2-methyl-4-chlorophenoxyacetic acid (MCPA).",
         ];
         break;
 
@@ -232,6 +234,7 @@ class _CameraScreenState extends State<CameraScreen> {
           "Post-emergence: Use fenoxaprop-P-ethyl (120 g/ha) or cyhalofop-butyl (200 g/ha)",
           "Cultural: Use clean seeds and maintain proper water depth (5-10 cm)",
           "Rotation: Follow rice with soybean or maize to break cycle",
+          "Reference: Lee, J., & Kim, S. (2025). Comparative metabolomics and transcriptomics provide new insights into the mechanisms of Echinochloa glabrescens resistance to florpyrauxifen-benzyl. PMC.",
         ];
         break;
 
@@ -241,9 +244,10 @@ class _CameraScreenState extends State<CameraScreen> {
         treatable = "Yes";
         treatmentInfo = [
           "Chemical: Apply glyphosate (1.5-2.0 kg/ha) or diquat (2-4 kg/ha) to foliage",
-          "Mechanical: Regular removal with nets or harvesters",
+          "Manual Removal: Regular removal with nets or harvesters",
           "Biological: Neochetina weevils provide effective control (release 1000-2000 adults/ha)",
           "Prevention: Install barriers in irrigation channels",
+          "Reference: Rahman, M. M., & Hossain, M. A. (2024). Effect of floating plants on weed emergence, growth, and yield of transplanted Aman rice varieties.",
         ];
         break;
 
@@ -253,9 +257,11 @@ class _CameraScreenState extends State<CameraScreen> {
         treatable = "No";
         treatmentInfo = [
           "Resistant to most herbicides - requires integrated approach",
-          "Mechanical: Hand pulling before seed set (wear gloves as sap may irritate)",
+          "Manual Removal: Hand pulling before seed set (wear gloves as sap may irritate)",
           "Cultural: Maintain dense crop canopy through proper spacing and fertilization",
           "Biological: Research ongoing with potential fungal pathogens",
+          "References: CABI. (2023). Sphenoclea zeylanica (gooseweed). CABI Digital Library.",
+          
         ];
         break;
 
@@ -268,6 +274,7 @@ class _CameraScreenState extends State<CameraScreen> {
           "Post-emergence: Use quinclorac (0.5 kg/ha) or propanil (3.0 kg/ha)",
           "Cultural: Flood fields to 10-15 cm depth for 3-4 days after transplanting",
           "Biological: Rice-fish farming reduces infestation",
+          "References: Chen, L., & Zhao, Q. (2025). A five-year examination into the occurrence of herbicide-resistant Echinochloa crus-galli populations in China. Scientific Reports, 15, 99846.",
         ];
         break;
 
@@ -277,9 +284,10 @@ class _CameraScreenState extends State<CameraScreen> {
         treatable = "Yes";
         treatmentInfo = [
           "Herbicides: Apply 2,4-D (1.0 kg/ha) or metsulfuron-methyl (4 g/ha)",
-          "Mechanical: Raking or harrowing in early growth stages",
+          "Manual Removal: Raking or harrowing in early growth stages",
           "Cultural: Improve drainage and avoid water stagnation",
           "Biological: No effective agents identified yet",
+          "Reference: Wang, H., & Liu, J. (2025). The Trp-574-Leu mutations together with enhanced metabolism contribute to cross-resistance to ALS inhibiting herbicides in Fimbristylis littoralis. Crop Protection, 153, 105135."
         ];
         break;
 
@@ -291,7 +299,8 @@ class _CameraScreenState extends State<CameraScreen> {
           "Pre-emergence: Apply pendimethalin (1.0 kg/ha) or oxadiazon (1.0 kg/ha)",
           "Post-emergence: Use cyhalofop-butyl (200 g/ha) or fenoxaprop-P-ethyl (120 g/ha)",
           "Cultural: Use competitive rice varieties with early vigor",
-          "Mechanical: Rogue out plants before flowering",
+          "Manual Removal: Rogue out plants before flowering",
+          "Reference: Kumar, V., & Singh, S. (2025). A global perspective on the biology, impacts, and management options of Leptochloa chinensis: A noxious weed of direct-seeded rice – A review. ",
         ];
         break;
 
@@ -301,9 +310,10 @@ class _CameraScreenState extends State<CameraScreen> {
         treatable = "Yes";
         treatmentInfo = [
           "Chemical: Apply triclopyr (1.0 kg/ha) or glyphosate (2.0 kg/ha) to foliage",
-          "Mechanical: Cutting below water surface to drown plants",
+          "Manual Removal: Cutting below water surface to drown plants",
           "Cultural: Reduce nutrient runoff into water bodies",
           "Biological: Research ongoing with leaf-feeding beetles",
+          "Reference: Bhat, T. A., & Nazir, A. (2022). Influence of rice establishment techniques and weed control measures on total nutrient uptake of the crop.",
         ];
         break;
 

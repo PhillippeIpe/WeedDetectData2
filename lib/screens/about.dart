@@ -55,7 +55,7 @@ class AboutScreen extends StatelessWidget {
             
             // About Description
             const Text(
-              "The Weed Detection App helps farmers and agricultural professionals identify and manage weeds in their fields using advanced image recognition technology.",
+              "The Weed Detection App intends to aid farmers and ordinary people to classify and manage weeds in their fields using advanced image recognition technology.",
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 16,
